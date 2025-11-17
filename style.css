@@ -1,167 +1,104 @@
-/* ==== GLOBAL COLORS ==== */
-:root{
-  --bg:#f6f8fb;
-  --card:#ffffff;
-  --accent:#1a73e8;
-  --muted:#6b7280;
-  --glass: rgba(255,255,255,0.6);
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f4f6fb;
+  color: #1a1a1a;
 }
 
-/* ==== RESET ==== */
-*{box-sizing:border-box;}
-body{
-  font-family:Inter,system-ui,Arial,sans-serif;
-  background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%);
-  margin:0;
-  padding:32px;
-  color:#0f172a;
+.hero {
+  background: linear-gradient(135deg, #1a73e8, #6a8cff);
+  padding: 50px;
+  text-align: center;
+  color: white;
 }
 
-/* ==== GRID LAYOUT ==== */
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:24px;
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
 }
 
-/* ==== PROFILE CARD ==== */
-.profile{
-  background:var(--card);
-  border-radius:16px;
-  padding:22px;
-  box-shadow:0 8px 30px rgba(18,38,63,0.06);
-  position:relative;
-}
-.avatar{
-  width:92px;
-  height:92px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--accent),#6a8cff);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-weight:700;
-  font-size:30px;
-}
-.name{
-  font-size:20px;
-  font-weight:700;
-  margin-top:12px;
-}
-.role{
-  font-size:13px;
-  color:var(--muted);
-  margin-top:4px;
+.hero p {
+  opacity: 0.9;
+  font-size: 18px;
 }
 
-.contact{
-  margin-top:16px;
-  font-size:13px;
-}
-.contact a{
-  color:var(--accent);
-  text-decoration:none;
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 30px;
 }
 
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:16px;
-}
-.chip{
-  background:linear-gradient(180deg,#f8fafc,#fff);
-  padding:7px 10px;
-  border-radius:999px;
-  font-size:12px;
-  border:1px solid #eef2f6;
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
 }
 
-/* ==== CV MAIN PANEL ==== */
-.cv{
-  background:linear-gradient(180deg,var(--card),#fff);
-  border-radius:16px;
-  padding:24px;
-  box-shadow:0 12px 40px rgba(15,23,42,0.06);
-  min-height:640px;
-}
-.toolbar{
-  display:flex;
-  gap:12px;
-  justify-content:space-between;
-  align-items:center;
-}
-.actions{
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-.btn{
-  background:var(--accent);
-  color:white;
-  padding:10px 14px;
-  border-radius:10px;
-  border:none;
-  cursor:pointer;
-  font-weight:600;
-}
-.btn.secondary{
-  background:transparent;
-  color:var(--accent);
-  border:1px solid rgba(26,115,232,0.15);
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: #1a73e8;
+  color: white;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 0 auto 20px;
 }
 
-.preview-title{
-  font-size:18px;
-  font-weight:700;
-  margin-top:18px;
+.sidebar h2 {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #1a73e8;
 }
 
-.section{
-  margin-top:14px;
-}
-.section h3{
-  margin:0;
-  font-size:14px;
-  color:#0f172a;
-}
-.section p{
-  margin:6px 0;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.5;
+.sidebar p, .sidebar li {
+  font-size: 14px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .container{
-    grid-template-columns:1fr;
-    padding:0;
-  }
-  .profile{
-    order:2;
-  }
-  .cv{
-    order:1;
-  }
+.social, .skills {
+  padding-left: 18px;
 }
 
-/* ===== PRINT MODE ===== */
-@media print{
-  body{
-    background:white;
-  }
-  .toolbar, .actions{
-    display:none;
-  }
-  .container{
-    grid-template-columns:1fr;
-  }
-  .profile{
-    display:block;
-    margin-bottom:12px;
+.download-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1a73e8;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+}
+
+.content h2 {
+  border-left: 5px solid #1a73e8;
+  padding-left: 10px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
   }
 }
