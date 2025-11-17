@@ -1,82 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Muhammad Naufal</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <div>
-                <h1>Muhammad Naufal</h1>
-                <p class="contact"><i class="fas fa-phone"></i> 083897347355<br><i class="fas fa-envelope"></i> muhammad.naufal6403@gmail.com</p>
-            </div>
-            <div class="profile-pic">
-                <img src="profile.jpg" alt="Muhammad Naufal" />
-                <span class="profile-label">Muhammad Naufal</span>
-            </div>
-        </div>
-    </header>
-    <main class="main-content">
-        <section>
-            <h2><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h2>
-            <ul>
-                <li>TK Halba Kualu Islami (2007-2008)</li>
-                <li>SD 010 Padang (2008-2009)</li>
-                <li>SD Muhammadiyah 04 Pekanbaru (2009-2014)</li>
-                <li>SMPIT Al-Quds Boarding School Pekanbaru (2015-2018)</li>
-                <li>Tahfidz Dar El-Iman Padang Islamic Boarding School (2018-2019)</li>
-                <li>SMAT AL-Fityan Pekanbaru (2019-2022)</li>
-                <li>FMIPA Ilmu Komputer UNRI (2022-sekarang)</li>
-            </ul>
-        </section>
-        <hr>
-        <section>
-            <h2><i class="fas fa-briefcase"></i> Pengalaman Magang / Kerja</h2>
-            <ul>
-                <li>Fotografer di acara konser Opik</li>
-                <li>Pembuatan website (joki)</li>
-                <li>Videografer & Editor Video</li>
-                <li>Magang Di bagian IOC-Gangguan Telkom Akses Pekanbaru</li>
-                <li>Pembuatan website pemetaan jaringan ODP dan ODC PT Telkom Akses Pekanbaru</li>
-            </ul>
-        </section>
-        <hr>
-        <section>
-            <h2><i class="fas fa-users"></i> Pengalaman Organisasi</h2>
-            <ul>
-                <li>Ketua Departemen Keamanan (Ponpes Dar el-Iman)</li>
-                <li>Ketua MPK SMAT AL-Fityah</li>
-                <li>Staf Biro Kode HIMALKOM</li>
-            </ul>
-        </section>
-        <hr>
-        <section>
-            <h2><i class="fas fa-hands-helping"></i> Kepanitiaan & Relawan</h2>
-            <ul>
-                <li>CO Futsal Competition</li>
-                <li>Fotografer Duta Pemuda Riau</li>
-                <li>Anggota HID Mustah</li>
-                <li>CO HID Batrai Ke 16th</li>
-            </ul>
-        </section>
-        <hr>
-        <section>
-            <h2><i class="fas fa-lightbulb"></i> Karya Ilmiah & Keahlian</h2>
-            <ul>
-                <li>Fotografi & Videografi(Cinema)</li>
-                <li>Editing Video (Capcut, Premier Pro)</li>
-                <li>Figma</li>
-                <li>UI/UX Design</li>
-                <li>Pemrograman Web</li>
-                <li>Sistem Informasi Geografis</li>
-            </ul>
-        </section>
-    </main>
-</body>
-</html> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Muhammad Naufal</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS External -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- PROFILE CARD -->
+    <aside class="profile" id="profileCard">
+      <div style="display:flex;gap:14px;align-items:center">
+        <div class="avatar">MN</div>
+        <div>
+          <div class="name">Muhammad Naufal</div>
+          <div class="role">Videographer • Photographer • Video Editor • Web & GIS Dev</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div>📍 <span id="cityLabel">Padang, Sumatra Barat</span></div>
+        <div>📞 0838-9734-7255</div>
+        <div>✉️ muhammad.naufal6403@gmail.com</div>
+        <div style="margin-top:8px">
+          🔗 <a href="https://github.com/MuhammadNauf" target="_blank">GitHub</a> • 
+          <a href="#">LinkedIn</a> • 
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="chip">Videography</div>
+        <div class="chip">Cinematic</div>
+        <div class="chip">Photography</div>
+        <div class="chip">Video Editing</div>
+        <div class="chip">Laravel</div>
+        <div class="chip">GIS (Leaflet)</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CV CONTENT -->
+    <main class="cv" id="cvContent">
+      
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="left">
+          <label for="citySelect">Pilih versi:</label>
+          <select id="citySelect">
+            <option value="padang">Padang</option>
+            <option value="pekanbaru">Pekanbaru</option>
+          </select>
+
+          <label style="margin-left:12px">Warna:</label>
+          <input type="color" id="accentPicker" value="#1a73e8">
+        </div>
+
+        <div class="actions">
+          <button class="btn secondary" id="previewBtn">Pratinjau PDF</button>
+          <button class="btn" id="downloadBtn">Download PDF</button>
+        </div>
+      </div>
+
+      <!-- CV Inner -->
+      <div id="cvInner">
+        <div class="preview-title">Profil Singkat</div>
+        <div class="section">
+          <p id="aboutText">
+            Saya adalah seorang kreator multimedia yang memiliki keahlian dalam videografi, fotografi, 
+            dan editing video untuk kebutuhan event, dokumentasi, hingga konten komersial. Saya juga 
+            memiliki kompetensi IT dalam pengembangan web, GIS, dan Laravel.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Keahlian Utama</h3>
+          <p>
+            Videografi & Editing (Premiere Pro, After Effects, DaVinci Resolve), 
+            Fotografi (Lightroom, Photoshop), 
+            Web Development (Laravel, PHP, JavaScript),
+            UI/UX (Figma), 
+            GIS (Leaflet, ArcGIS, OpenStreetMap).
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Pengalaman & Project</h3>
+          <p id="projects">
+            - Dokumentasi Konser Opick<br>
+            - Video Cinematic (Short Movie)<br>
+            - Dokumentasi Duta Remaja Riau 2022<br>
+            - Dokumentasi Kegiatan Kampus<br>
+            - Magang — PT Telkom Akses (GIS & IOC)
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Pendidikan</h3>
+          <p>D3 Manajemen Informatika — Universitas Riau (2022–2025)</p>
+        </div>
+
+        <div class="section">
+          <h3>Portofolio</h3>
+          <p>Instagram: @iamnaufal • GitHub: github.com/MuhammadNauf</p>
+        </div>
+
+        <div class="section">
+          <h3>Karakter & Kemampuan Penunjang</h3>
+          <p>Kreatif, detail-oriented, komunikatif, cepat belajar, dan adaptif.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
